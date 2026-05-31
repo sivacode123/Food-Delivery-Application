@@ -1,0 +1,128 @@
+@charset "UTF-8";
+/* =====================
+   GLOBAL
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #fff6ec, #fdf1ff);
+  color: #1f2937;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =====================
+   CONTAINER
+===================== */
+.container {
+  width: 100%;
+  max-width: 520px;
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 22px;
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.14);
+}
+
+/* =====================
+   TITLE
+===================== */
+.container h2 {
+  text-align: center;
+  font-size: 1.9rem;
+  font-weight: 800;
+  margin-bottom: 28px;
+  background: linear-gradient(90deg, #ff6a00, #ff3d81);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* =====================
+   FORM
+===================== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* =====================
+   INPUTS
+===================== */
+textarea,
+select {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1.5px solid #e5e7eb;
+  font-size: 0.9rem;
+  font-family: inherit;
+  resize: none;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+textarea {
+  min-height: 90px;
+}
+
+/* Focus state */
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #ff6a00;
+  box-shadow: 0 0 0 3px rgba(255, 106, 0, 0.15);
+}
+
+/* =====================
+   PLACE ORDER BUTTON
+===================== */
+.place-order-btn {
+  margin-top: 18px;
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #ff6a00, #ff3d81);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 14px 32px rgba(255, 61, 129, 0.45);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.place-order-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 42px rgba(255, 61, 129, 0.6);
+}
+
+.place-order-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 10px 22px rgba(255, 61, 129, 0.4);
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 600px) {
+  .container {
+    margin: 20px;
+    padding: 26px;
+  }
+
+  .container h2 {
+    font-size: 1.6rem;
+  }
+}
